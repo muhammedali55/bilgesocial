@@ -81,7 +81,7 @@ export default class Post extends Component {
             <img src="images/users/user-5.jpg" alt="user" className="profile-photo-md pull-left" />
             <div className="post-detail">
               <div className="user-info">
-                <h5><a href="timeline.html" className="profile-link">{this.state.post.username}</a> <span className="following">{this.props.data.following ? 'following' : '' }</span></h5>
+                <h5><a href="timeline.html" className="profile-link">{this.props.data.username}</a> <span className="following">{this.props.data.following ? 'following' : '' }</span></h5>
                 <p className="text-muted">Published a photo about {this.getShareTime(this.props.data.publishat)}</p>
               </div>
               <div className="reaction">
@@ -98,15 +98,22 @@ export default class Post extends Component {
               </div>
               <div className="line-divider"></div>
               {
-                  this.props.data.comment.map(x=>
+                  this.props.data.comments.map(x=>
                         <div key={x.id} className="post-comment">
-                            <img src={x.photo} alt="" className="profile-photo-sm" />
+                            <img src="/images/users/user-1.jpg" alt="" className="profile-photo-sm" />
                             <p><a href="timeline.html" className="profile-link">{x.username} </a>
                             <i className="em em-laughing"></i> 
                             {
-                                x.comment
+                                x.content
                             }
                             </p>
+                            <span>
+                              <br />
+                              <label style={{color:'grey',fontStyle:'italic',fontSize:'10px'}}> 
+                                 {this.getShareTime(x.commenttime)}
+                              </label>
+                             
+                              </span>
                         </div>
                     )
               }
