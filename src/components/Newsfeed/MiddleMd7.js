@@ -6,9 +6,159 @@ export default class MiddleMd7 extends Component {
         super(props)
     }
 
+    /**
+     * Api den userid bu kullanıcıya ait post listesini çekeceğiz.
+     */
     state={
         postList:[
-            {id: 1},{id:2 },{id:3 },{id:4}
+            {
+                id: 1,
+                username: "Alexis Clark",
+                following: true,
+                publishat: 1645613293,
+                content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                comment: [
+                    {
+                        id: 1,
+                        username: "Diana",
+                        photo: "images/users/user-11.jpg",
+                        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
+
+                    },
+                    {
+                        id: 2,
+                        username: "Ahmet",
+                        photo: "images/users/user-19.jpg",
+                        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
+
+                    },
+                    {
+                        id: 3,
+                        username: "Bahar",
+                        photo: "images/users/user-20.jpg",
+                        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
+
+                    },
+                    {
+                        id: 4,
+                        username: "Gümüş",
+                        photo: "images/users/user-1.jpg",
+                        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
+
+                    }
+                ]
+            },
+            {
+                id: 2,
+                username: "Aleyna KUŞ",
+                following: true,
+                publishat: 1645613293,
+                content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                comment: [
+                    {
+                        id: 1,
+                        username: "Diana",
+                        photo: "images/users/user-11.jpg",
+                        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
+
+                    },
+                    {
+                        id: 2,
+                        username: "Ahmet",
+                        photo: "images/users/user-19.jpg",
+                        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
+
+                    },
+                    {
+                        id: 3,
+                        username: "Bahar",
+                        photo: "images/users/user-20.jpg",
+                        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
+
+                    },
+                    {
+                        id: 4,
+                        username: "Gümüş",
+                        photo: "images/users/user-1.jpg",
+                        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
+
+                    }
+                ]
+            },
+            {
+                id: 3,
+                username: "Besim BAŞ",
+                following: true,
+                publishat: 1645613293,
+                content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                comment: [
+                    {
+                        id: 1,
+                        username: "Diana",
+                        photo: "images/users/user-11.jpg",
+                        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
+
+                    },
+                    {
+                        id: 2,
+                        username: "Ahmet",
+                        photo: "images/users/user-19.jpg",
+                        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
+
+                    },
+                    {
+                        id: 3,
+                        username: "Bahar",
+                        photo: "images/users/user-20.jpg",
+                        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
+
+                    },
+                    {
+                        id: 4,
+                        username: "Gümüş",
+                        photo: "images/users/user-1.jpg",
+                        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
+
+                    }
+                ]
+            },
+            {
+                id: 4,
+                username: "Verimli SAAT",
+                following: true,
+                publishat: 1645613293,
+                content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                comment: [
+                    {
+                        id: 1,
+                        username: "Diana",
+                        photo: "images/users/user-11.jpg",
+                        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
+
+                    },
+                    {
+                        id: 2,
+                        username: "Ahmet",
+                        photo: "images/users/user-19.jpg",
+                        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
+
+                    },
+                    {
+                        id: 3,
+                        username: "Bahar",
+                        photo: "images/users/user-20.jpg",
+                        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
+
+                    },
+                    {
+                        id: 4,
+                        username: "Gümüş",
+                        photo: "images/users/user-1.jpg",
+                        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
+
+                    }
+                ]
+            }
         ]
     }
 
@@ -47,7 +197,8 @@ export default class MiddleMd7 extends Component {
             </div>
 
             {
-                this.state.postList.map(x=> <Post />)
+                this.state.postList.map(
+                    post=> <Post key={post.id} data={post}/>)
             }
          
       </div>
