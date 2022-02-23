@@ -15,7 +15,10 @@ export default class MiddleMd7 extends Component {
                 id: 1,
                 username: "Alexis Clark",
                 following: true,
-                publishat: 1645613293,
+                postmediaurl: "images/post-images/1.jpg",
+                like: 400,
+                dislike: 2,
+                publishat: 1645359091000,
                 content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                 comment: [
                     {
@@ -53,6 +56,9 @@ export default class MiddleMd7 extends Component {
                 username: "Aleyna KUŞ",
                 following: true,
                 publishat: 1645613293,
+                postmediaurl: "images/post-images/2.jpg",
+                like: 400,
+                dislike: 2,
                 content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                 comment: [
                     {
@@ -90,6 +96,9 @@ export default class MiddleMd7 extends Component {
                 username: "Besim BAŞ",
                 following: true,
                 publishat: 1645613293,
+                postmediaurl: "images/post-images/3.jpg",
+                like: 400,
+                dislike: 2,
                 content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                 comment: [
                     {
@@ -127,6 +136,9 @@ export default class MiddleMd7 extends Component {
                 username: "Verimli SAAT",
                 following: true,
                 publishat: 1645613293,
+                postmediaurl: "images/post-images/4.jpg",
+                like: 400,
+                dislike: 2,
                 content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                 comment: [
                     {
