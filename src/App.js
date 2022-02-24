@@ -3,13 +3,14 @@ import NewsFeed from './pages/NewsFeed';
 import {BrowserRouter,Route,Routes} from 'react-router-dom'
 import Login from './pages/Login'
 import Profile from './pages/Profile';
+import {useSelector} from 'react-redux'
 
 function App() {
 
   /**
    * Eğer Login olmuş ise,
    */
-  let singin = false
+  let islogin  = useSelector(x=> x.login)
 
   /*
   // STORE OLUŞTURULACAK
@@ -52,9 +53,10 @@ function App() {
   return (  
     <BrowserRouter>
     <Routes>
-       <Route path='/'  element={  <NewsFeed />  }/>
+       <Route path='/'  element={  islogin ? <NewsFeed />
+                : <Login />  }/>
        <Route path='/profile' element={
-         singin ? <Profile />
+         islogin ? <Profile />
                 : <Login />             
        }/>
        <Route path='/login' element={<Login />}/>

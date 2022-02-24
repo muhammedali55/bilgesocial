@@ -1,4 +1,5 @@
-const login= (state=false,action)=>{
+const login= (state,action)=>{
+  
     switch(action.type){
       case 'SIGN_IN': return true    
       default: return false

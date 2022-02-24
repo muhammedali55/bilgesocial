@@ -4,9 +4,9 @@ import StaticMd3 from '../components/Newsfeed/StaticMd3'
 import StaticMs2 from '../components/Newsfeed/StaticMs2'
 import Header from './Header'
 import Footer from './Footer'
-import {arttir,azalt,login} from '../redux/actions'
 
-export default class NewsFeed extends Component {
+
+class NewsFeed extends Component {
 
   /**
    * Burada props içnide gelen verileri kontrol ederek bir çok konuda bilgi sahibi olabilir.z
@@ -17,6 +17,7 @@ export default class NewsFeed extends Component {
     super(props)
     console.log(props)
   }
+
 
   render() {
     return (
@@ -39,3 +40,7 @@ export default class NewsFeed extends Component {
     )
   }
 }
+
+
+
+export default NewsFeed

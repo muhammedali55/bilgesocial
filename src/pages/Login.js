@@ -1,6 +1,46 @@
 import React, { Component } from 'react'
+import {connect} from 'react-redux'
 
-export default class Login extends Component {
+import {login} from '../redux/actions'
+class Login extends Component {
+
+    state={
+        username: '',
+        password: ''    
+    }
+
+    dologin=()=>{
+    
+        /**
+         * Bu dispatch içinden gelen dologin methodunu tetikler.
+         */
+        this.props.dologin()
+    }
+
+  
+    loginAction= ()=>{
+        const data = {
+            "username": this.state.username,
+            "password": this.state.password
+          }
+        fetch('http://localhost:8091/v1/auth/dologin', {
+            method: 'POST', // or 'PUT'
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+            })
+            .then(response => response.json())
+            .then(data => {              
+                if(data.token.length > 0)
+                    this.dologin()
+            })
+            .catch((error) => {
+            console.error('Error:', error);
+            });
+    }
+
+
   render() {
     return (
       <div className='row'>
@@ -22,6 +62,7 @@ export default class Login extends Component {
                                 <ul className="nav nav-tabs">
 
                                     <li className="active"><a href="#login" data-toggle="tab">Login</a></li>
+                                  
                                 </ul>
                             </div>
 
@@ -34,12 +75,14 @@ export default class Login extends Component {
                                     <p className="text-muted">Log into your account</p>
 
                                 
-                                    <form name="Login_form" id='Login_form' action="/login"
-                                    method="post">
                                         <div className="row">
                                             <div className="form-group col-xs-12">
                                                 <label htmlFor="my-email" className="sr-only">Email</label>
-                                                <input id="my-email"
+                                                <input id="my-email" onChange={(e)=>{
+                                                  this.setState({
+                                                      username: e.target.value
+                                                  })
+                                                }}
                                                     className="form-control input-group-lg"
                                                     type="text" name="username" title="Enter Email"
                                                     placeholder="Your Email"/>
@@ -48,7 +91,11 @@ export default class Login extends Component {
                                         <div className="row">
                                             <div className="form-group col-xs-12">
                                                 <label htmlFor="my-password" className="sr-only">Password</label>
-                                                <input id="my-password"
+                                                <input id="my-password"  onChange={(e)=>{
+                                                  this.setState({
+                                                      password: e.target.value
+                                                  })
+                                                }}
                                                     className="form-control input-group-lg"
                                                     type="password" name="password"
                                                     title="Enter password" placeholder="Password"/>
@@ -56,9 +103,8 @@ export default class Login extends Component {
                                         </div>
                                     
                                         <p><a href="#">Forgot Password?</a></p>
-                                        <button className="btn btn-primary" type="submit">Login Now</button>
-                                    </form>
-
+                                        <button className="btn btn-primary" onClick={this.loginAction}>Login Now</button>
+                             
                                 </div>
                             </div>
                         </div>
@@ -72,3 +118,17 @@ export default class Login extends Component {
     )
   }
 }
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+      // dispatching plain actions
+      dologin: () => dispatch({ type: 'SIGN_IN' }),
+   
+    }
+  }
+  /**
+   * Bilgilendirme!!!
+   * connect kullanırken, ilk parametreyi statetoprops olarak aradığı için uygulama hata veriyor idi.
+   * bu nedenle ilk parametreyi null olarak atadık.
+   */
+export default connect(null,mapDispatchToProps)(Login)
