@@ -4,6 +4,7 @@ import StaticMd3 from '../components/Newsfeed/StaticMd3'
 import StaticMs2 from '../components/Newsfeed/StaticMs2'
 import Header from './Header'
 import Footer from './Footer'
+import {arttir,azalt,login} from '../redux/actions'
 
 export default class NewsFeed extends Component {
 
