@@ -50,8 +50,9 @@ function App() {
        <Route path='/'  element={  <NewsFeed />  }/>
        <Route path='/profile' element={
          singin ? <div><h1>PROFİLE</h1></div>
-                : <Login />
+                : <Login />             
        }/>
+       <Route path='/login' element={<Login />}/>
     </Routes>    
 </BrowserRouter>
 
