@@ -2,8 +2,13 @@ import './App.css';
 import NewsFeed from './pages/NewsFeed';
 import {BrowserRouter,Route,Routes} from 'react-router-dom'
 import Login from './pages/Login'
+import Profile from './pages/Profile';
+
 function App() {
 
+  /**
+   * Eğer Login olmuş ise,
+   */
   let singin = false
 
   /*
@@ -49,12 +54,12 @@ function App() {
     <Routes>
        <Route path='/'  element={  <NewsFeed />  }/>
        <Route path='/profile' element={
-         singin ? <div><h1>PROFİLE</h1></div>
+         singin ? <Profile />
                 : <Login />             
        }/>
        <Route path='/login' element={<Login />}/>
     </Routes>    
-</BrowserRouter>
+  </BrowserRouter>
 
         
   );

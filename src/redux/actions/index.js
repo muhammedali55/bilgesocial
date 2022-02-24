@@ -1,14 +1,18 @@
-const arttir= ()=>{
+/**
+ * Bir js içinde tanımlanan nesneleri dışarı aktarmak istiyor iseniz onlar export etmek zorundasınız.
+ * @returns 
+ */
+export const arttir= ()=>{
     return{
       type: "ARTTIR"
     }
   }
-const azalt= ()=>{
+  export const azalt= ()=>{
     return{
       type: "AZALT"
     }
   }
-const login= ()=>{
+  export const login= ()=>{
     return{
       type: "SIGN_IN"
     }
