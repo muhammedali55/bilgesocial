@@ -1,8 +1,10 @@
 import './App.css';
 import NewsFeed from './pages/NewsFeed';
-import {createStore} from 'redux'
+
+
 function App() {
 
+  
   /*
   // STORE OLUŞTURULACAK
 
@@ -41,8 +43,10 @@ function App() {
   store.dispatch(azalt())
   */
 
-  return (   
+  return (
+
        <NewsFeed />   
+
   );
 }
 
