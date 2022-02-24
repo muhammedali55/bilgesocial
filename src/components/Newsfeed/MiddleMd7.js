@@ -71,7 +71,7 @@ export default class MiddleMd7 extends Component {
 
             {
                 this.state.postList.map(
-                    post=> <Post key={post.id} data={post}/>)
+                    post=> <Post key={post.id} data={post} />)
             }
          
       </div>

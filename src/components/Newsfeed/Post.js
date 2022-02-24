@@ -95,6 +95,7 @@ export default class Post extends Component {
                         this.props.data.content
                     }
                      <i className="em em-anguished"></i> <i className="em em-anguished"></i> <i className="em em-anguished"></i></p>
+                   
               </div>
               <div className="line-divider"></div>
               {
