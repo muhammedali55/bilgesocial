@@ -10,6 +10,7 @@ import reportWebVitals from './reportWebVitals';
 import AllReducers from './redux/reducers'
 import { createStore } from 'redux';
 import {Provider} from 'react-redux'
+
 /**
  * Sorun: Eğer benim 100 adet Reducer ım olduğunda ne yapacağım ?
  * ÖNEMLİ!! bir klasör içinde index.js var ise o direkt çağırılır.

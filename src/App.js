@@ -1,10 +1,11 @@
 import './App.css';
 import NewsFeed from './pages/NewsFeed';
-
-
+import {BrowserRouter,Route,Routes} from 'react-router-dom'
+import Login from './pages/Login'
 function App() {
 
-  
+  let singin = false
+
   /*
   // STORE OLUŞTURULACAK
 
@@ -43,10 +44,18 @@ function App() {
   store.dispatch(azalt())
   */
 
-  return (
+  return (  
+    <BrowserRouter>
+    <Routes>
+       <Route path='/'  element={  <NewsFeed />  }/>
+       <Route path='/profile' element={
+         singin ? <div><h1>PROFİLE</h1></div>
+                : <Login />
+       }/>
+    </Routes>    
+</BrowserRouter>
 
-       <NewsFeed />   
-
+        
   );
 }
 

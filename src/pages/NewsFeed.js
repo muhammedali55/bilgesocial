@@ -4,6 +4,17 @@ import StaticMd3 from '../components/Newsfeed/StaticMd3'
 import StaticMs2 from '../components/Newsfeed/StaticMs2'
 
 export default class NewsFeed extends Component {
+
+  /**
+   * Burada props içnide gelen verileri kontrol ederek bir çok konuda bilgi sahibi olabilir.z
+   * 
+   * @param {*} props 
+   */
+  constructor(props){
+    super(props)
+    console.log(props)
+  }
+
   render() {
     return (
       
