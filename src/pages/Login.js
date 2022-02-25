@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
-
-import {login} from '../redux/actions'
+import authservice from '../config/AuthService'
+import loginstore from '../stores/LoginStore'
 class Login extends Component {
 
     state={
@@ -23,7 +23,7 @@ class Login extends Component {
             "username": this.state.username,
             "password": this.state.password
           }
-        fetch('http://localhost:8091/v1/auth/dologin', {
+        fetch(authservice.dologin, {
             method: 'POST', // or 'PUT'
             headers: {
                 'Content-Type': 'application/json',
@@ -32,11 +32,14 @@ class Login extends Component {
             })
             .then(response => response.json())
             .then(data => {              
-                if(data.token.length > 0)
-                    this.dologin()
+                if(data.token.length > 0){
+                    loginstore.setToken(data.token)
+                     this.dologin()
+                }
+                   
             })
             .catch((error) => {
-            console.error('Error:', error);
+                console.error('Error:', error);
             });
     }
 
@@ -118,6 +121,10 @@ class Login extends Component {
     )
   }
 }
+const mapStateToProps = (state) => 
+({ 
+    loginstate: state.login
+})
 
 const mapDispatchToProps = (dispatch) => {
     return {
@@ -131,4 +138,4 @@ const mapDispatchToProps = (dispatch) => {
    * connect kullanırken, ilk parametreyi statetoprops olarak aradığı için uygulama hata veriyor idi.
    * bu nedenle ilk parametreyi null olarak atadık.
    */
-export default connect(null,mapDispatchToProps)(Login)
+export default connect(mapStateToProps,mapDispatchToProps)(Login)
